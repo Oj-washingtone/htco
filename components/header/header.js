@@ -55,7 +55,7 @@ export default function Header() {
               <Link href="/#activities">Activities</Link>
             </li>
             <li>
-              <Link href="/faqs">FAQs</Link>
+              <Link href="#faq">FAQs</Link>
             </li>
             <li>
               <Link href="/blog">Blog</Link>

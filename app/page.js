@@ -439,6 +439,64 @@ export default function Home() {
           <BlogSection />
 
           <FAQs />
+
+          <div className="row contactus-section">
+            <div className="section-header">
+              <h4 className="poppins-extrabold section-title">Contact</h4>
+              <h3 className="poppins-extrabold about-intro">Talk to us</h3>
+            </div>
+
+            <div className="col-sm-12 conct-wrapper">
+              <div className="row">
+                <div className="form-wrapper">
+                  <form className="contact-form form-wrapper">
+                    <div className="row form-row">
+                      <div className="col-sm-6">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="First name"
+                        />
+                      </div>
+                      <div className="col-sm-6">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Last name"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="row form-row">
+                      <div className="col-sm-12">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Email"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="row form-row">
+                      <div className="col-sm-12">
+                        <textarea
+                          className="form-control"
+                          id="label"
+                          rows="3"
+                          placeholder="Message"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div className="row form-row">
+                      <div className="col-sm-12">
+                        <button className="my-btn custom-btn-fill">Send</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         {/* <!-- <app-contact-page /> --> */}
       </main>
