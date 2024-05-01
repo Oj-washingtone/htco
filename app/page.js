@@ -86,7 +86,7 @@ export default function Home() {
                 <div className="col-sm-4">
                   <div className="feature-wrapper">
                     <div className="feature-icon">
-                      <img src="../assets/images/site/feature-1.png" alt="" />
+                      
                     </div>
                     <h4 className="poppins-bold feature-title">
                       Poverty Eradication
@@ -100,7 +100,7 @@ export default function Home() {
                 <div className="col-sm-4">
                   <div className="feature-wrapper">
                     <div className="feature-icon">
-                      <img src="../assets/images/site/feature-2.png" alt="" />
+                      
                     </div>
                     <h4 className="poppins-bold feature-title">Health Care</h4>
                     <p className="poppins-regular feature-text">
@@ -113,7 +113,7 @@ export default function Home() {
                 <div className="col-sm-4">
                   <div className="feature-wrapper">
                     <div className="feature-icon">
-                      <img src="../assets/images/site/feature-3.png" alt="" />
+                      
                     </div>
                     <h4 className="poppins-bold feature-title">PwD</h4>
                     <p className="poppins-regular feature-text">
@@ -126,7 +126,7 @@ export default function Home() {
                 <div className="col-sm-4">
                   <div className="feature-wrapper">
                     <div className="feature-icon">
-                      <img src="../assets/images/site/feature-4.png" alt="" />
+                      
                     </div>
                     <h4 className="poppins-bold feature-title">Empowerment</h4>
                     <p className="poppins-regular feature-text">
@@ -140,7 +140,7 @@ export default function Home() {
                 <div className="col-sm-4">
                   <div className="feature-wrapper">
                     <div className="feature-icon">
-                      <img src="../assets/images/site/feature-5.png" alt="" />
+                     
                     </div>
                     <h4 className="poppins-bold feature-title">Stability</h4>
                     <p className="poppins-regular feature-text">
@@ -154,7 +154,7 @@ export default function Home() {
                 <div className="col-sm-4">
                   <div className="feature-wrapper">
                     <div className="feature-icon">
-                      <img src="../assets/images/site/feature-6.png" alt="" />
+                      
                     </div>
                     <h4 className="poppins-bold feature-title">
                       Gender Equality
@@ -169,75 +169,75 @@ export default function Home() {
           </div>
         </div>
         <div className="fun-fact-section">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4 col-md-12 col-sm-12">
-                <div class="section-title">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-4 col-md-12 col-sm-12">
+                <div className="section-title">
                   <h5>COUNTER</h5>
                   <h2>Fun Facts</h2>
                 </div>
               </div>
-              <div class="col-lg-8 col-md-12 col-sm-12">
-                <div class="row text-center">
-                  <div class="col-lg-3 col-md-6 col-sm-12">
+              <div className="col-lg-8 col-md-12 col-sm-12">
+                <div className="row text-center">
+                  <div className="col-lg-3 col-md-6 col-sm-12">
                     <div
-                      class="single-counter wow fadeInUp animated"
+                      className="single-counter wow fadeInUp animated"
                       data-animation="fadeInDown animated"
                       data-delay=".2s"
                     >
-                      <div class="icon">
+                      <div className="icon">
                         <img src="img/icon/cn-iocn01.png" alt="img" />
                       </div>
 
-                      <div class="counter p-relative">
-                        <span class="count">784</span>
+                      <div className="counter p-relative">
+                        <span className="count">784</span>
                         <p>Happy Clients</p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div className="col-lg-3 col-md-6 col-sm-12">
                     <div
-                      class="single-counter wow fadeInUp animated"
+                      className="single-counter wow fadeInUp animated"
                       data-animation="fadeInDown animated"
                       data-delay=".2s"
                     >
-                      <div class="icon">
+                      <div className="icon">
                         <img src="img/icon/cn-iocn02.png" alt="img" />
                       </div>
-                      <div class="counter p-relative">
-                        <span class="count">987</span>
+                      <div className="counter p-relative">
+                        <span className="count">987</span>
                         <p>Happy Clients</p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div className="col-lg-3 col-md-6 col-sm-12">
                     <div
-                      class="single-counter wow fadeInUp animated"
+                      className="single-counter wow fadeInUp animated"
                       data-animation="fadeInDown animated"
                       data-delay=".2s"
                     >
-                      <div class="icon">
+                      <div className="icon">
                         <img src="img/icon/cn-iocn03.png" alt="img" />
                       </div>
 
-                      <div class="counter p-relative">
-                        <span class="count">974</span>
+                      <div className="counter p-relative">
+                        <span className="count">974</span>
                         <p>Employees</p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div className="col-lg-3 col-md-6 col-sm-12">
                     <div
-                      class="single-counter wow fadeInUp animated"
+                      className="single-counter wow fadeInUp animated"
                       data-animation="fadeInDown animated"
                       data-delay=".2s"
                     >
-                      <div class="icon">
+                      <div className="icon">
                         <img src="img/icon/cn-iocn04.png" alt="img" />
                       </div>
 
-                      <div class="counter p-relative">
-                        <span class="count">687</span>
+                      <div className="counter p-relative">
+                        <span className="count">687</span>
                         <p>Annual Turnover</p>
                       </div>
                     </div>
@@ -402,6 +402,25 @@ export default function Home() {
                         <h5 className="poppins-bold">Alphonce Ariwi</h5>
                         <h6 className="poppins-regular role">
                           Chief coordinator{" "}
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-sm-4">
+                    <div className="member-card">
+                      <div className="member-image">
+                        <Image
+                          src="/img/team/NaomiAdhiambo.jpg"
+                          alt="Picture of the author"
+                          width={400}
+                          height={400}
+                        />
+                      </div>
+                      <div className="member-info">
+                        <h5 className="poppins-bold">Naomi Adhiambo</h5>
+                        <h6 className="poppins-regular role">
+                          Administrative assistant
                         </h6>
                       </div>
                     </div>

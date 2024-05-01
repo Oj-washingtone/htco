@@ -139,3 +139,56 @@
   width: 100% !important;
   background-color: #fff !important;
 }
+
+.menu-small {
+  display: none;
+
+}
+
+/* Responsive Css */
+@media only screen and (max-width: 600px) {
+  .footer-gal-wrapper {
+    display: none;
+  }
+
+  header {
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-small {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: #fff;
+    border-bottom: 1px solid #f2f3f5;
+    animation: slide-in 0.5s ease forwards;
+    /* display: none; */
+  }
+
+  .menu-small ul {
+    display: block;
+    padding: 20px;
+  }
+
+  .menu-small ul li {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  @keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+}

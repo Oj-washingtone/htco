@@ -27,38 +27,38 @@ export default function Footer() {
               <div className="footer-links">
                 <Link href="/ai-assistant">
                   <p className="poppins-regular footer-link-item">
-                    <i class="bi bi-chevron-double-right"></i> About
+                    <i className="bi bi-chevron-double-right"></i> About
                   </p>
                 </Link>
 
                 <Link href="/ai-assistant">
-                  <i class="bi bi-chevron-double-right"></i> Activities
+                  <i className="bi bi-chevron-double-right"></i> Activities
                 </Link>
                 <Link href="/ai-assistant">
-                  <i class="bi bi-chevron-double-right"></i> FAQ
+                  <i className="bi bi-chevron-double-right"></i> FAQ
                 </Link>
                 <Link href="/ai-assistant">
-                  <i class="bi bi-chevron-double-right"></i> Blog
+                  <i className="bi bi-chevron-double-right"></i> Blog
                 </Link>
               </div>
             </div>
             <div className="col-sm-3">
               <h3 className="poppins-bold footer-section-title">Get intouch</h3>
               <div className="footer-contact">
-                <i class="bi bi-geo-alt"></i>
+                <i className="bi bi-geo-alt"></i>
                 <p>122, Street, mmVSB</p>
               </div>
               <div className="footer-contact">
-                <i class="bx bxs-envelope"></i>
+                <i className="bx bxs-envelope"></i>
                 <p>info@example.com</p>
               </div>
 
               <div className="footer-contact">
-                <i class="bx bxs-phone"></i>
+                <i className="bx bxs-phone"></i>
                 <p>+2547 000 000</p>
               </div>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-3 footer-gal-wrapper">
               <h3 className="poppins-bold footer-section-title">Gallery</h3>
               <div className="row">
                 <div className="col-sm-6">
