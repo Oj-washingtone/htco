@@ -4,6 +4,7 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import BlogSection from "@/components/blog/BlogSection";
 import FAQs from "@/components/faqs/faqs";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -24,10 +25,14 @@ export default function Home() {
 
                   <div className="actions">
                     <button className="my-btn custom-btn-outline">
-                      Learn More
+                      <Link href="#about">
+                        <div className="learn-more-btn">Learn More</div>
+                      </Link>
                     </button>
                     <button className="my-btn custom-btn-fill">
-                      Contact Us
+                      <Link href="/#contact-us">
+                        <div className="contact-us-btn">Contact us</div>
+                      </Link>
                     </button>
                   </div>
                 </div>
@@ -85,9 +90,7 @@ export default function Home() {
               <div className="row">
                 <div className="col-sm-4">
                   <div className="feature-wrapper">
-                    <div className="feature-icon">
-                      
-                    </div>
+                    <div className="feature-icon"></div>
                     <h4 className="poppins-bold feature-title">
                       Poverty Eradication
                     </h4>
@@ -99,9 +102,7 @@ export default function Home() {
                 </div>
                 <div className="col-sm-4">
                   <div className="feature-wrapper">
-                    <div className="feature-icon">
-                      
-                    </div>
+                    <div className="feature-icon"></div>
                     <h4 className="poppins-bold feature-title">Health Care</h4>
                     <p className="poppins-regular feature-text">
                       Increase the communities access to basic and primary
@@ -112,9 +113,7 @@ export default function Home() {
 
                 <div className="col-sm-4">
                   <div className="feature-wrapper">
-                    <div className="feature-icon">
-                      
-                    </div>
+                    <div className="feature-icon"></div>
                     <h4 className="poppins-bold feature-title">PwD</h4>
                     <p className="poppins-regular feature-text">
                       Promote the social and economic welfare of persons with
@@ -125,9 +124,7 @@ export default function Home() {
 
                 <div className="col-sm-4">
                   <div className="feature-wrapper">
-                    <div className="feature-icon">
-                      
-                    </div>
+                    <div className="feature-icon"></div>
                     <h4 className="poppins-bold feature-title">Empowerment</h4>
                     <p className="poppins-regular feature-text">
                       Create opportunities for youth empowerment, leadership
@@ -139,9 +136,7 @@ export default function Home() {
 
                 <div className="col-sm-4">
                   <div className="feature-wrapper">
-                    <div className="feature-icon">
-                     
-                    </div>
+                    <div className="feature-icon"></div>
                     <h4 className="poppins-bold feature-title">Stability</h4>
                     <p className="poppins-regular feature-text">
                       Promote peace, reconciliation, and conflict resolution
@@ -153,9 +148,7 @@ export default function Home() {
 
                 <div className="col-sm-4">
                   <div className="feature-wrapper">
-                    <div className="feature-icon">
-                      
-                    </div>
+                    <div className="feature-icon"></div>
                     <h4 className="poppins-bold feature-title">
                       Gender Equality
                     </h4>
@@ -190,8 +183,8 @@ export default function Home() {
                       </div>
 
                       <div className="counter p-relative">
-                        <span className="count">784</span>
-                        <p>Happy Clients</p>
+                        <span className="count">1244</span>
+                        <p>People reached</p>
                       </div>
                     </div>
                   </div>
@@ -205,8 +198,8 @@ export default function Home() {
                         <img src="img/icon/cn-iocn02.png" alt="img" />
                       </div>
                       <div className="counter p-relative">
-                        <span className="count">987</span>
-                        <p>Happy Clients</p>
+                        <span className="count">362</span>
+                        <p>Health care services supported </p>
                       </div>
                     </div>
                   </div>
@@ -221,8 +214,8 @@ export default function Home() {
                       </div>
 
                       <div className="counter p-relative">
-                        <span className="count">974</span>
-                        <p>Employees</p>
+                        <span className="count">148</span>
+                        <p>Children educated</p>
                       </div>
                     </div>
                   </div>
@@ -237,8 +230,8 @@ export default function Home() {
                       </div>
 
                       <div className="counter p-relative">
-                        <span className="count">687</span>
-                        <p>Annual Turnover</p>
+                        <span className="count">136</span>
+                        <p>Persons with disabilities reached </p>
                       </div>
                     </div>
                   </div>
@@ -430,14 +423,14 @@ export default function Home() {
                     <div className="member-card">
                       <div className="member-image">
                         <Image
-                          src="/img/team/NaomiAdhiambo.jpg"
+                          src="/img/team/WilliamsSinino.jpg"
                           alt="Picture of the author"
                           width={400}
                           height={400}
                         />
                       </div>
                       <div className="member-info">
-                        <h5 className="poppins-bold">Naomi Adhiambo</h5>
+                        <h5 className="poppins-bold">Williams Sinino</h5>
                         <h6 className="poppins-regular role">
                           Administrative assistant
                         </h6>
@@ -459,7 +452,7 @@ export default function Home() {
 
           <FAQs />
 
-          <div className="row contactus-section">
+          <div className="row contactus-section" id="contact-us">
             <div className="section-header">
               <h4 className="poppins-extrabold section-title">Contact</h4>
               <h3 className="poppins-extrabold about-intro">Talk to us</h3>
@@ -492,6 +485,16 @@ export default function Home() {
                           type="text"
                           className="form-control"
                           placeholder="Email"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="row form-row">
+                      <div className="col-sm-12">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Subject"
                         />
                       </div>
                     </div>

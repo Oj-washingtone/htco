@@ -1,10 +1,12 @@
+"use client";
+
 import React, { useState } from "react";
 import "./admin.css";
 import BlogEditor from "@/components/BlogEditor/BlogEditor";
 
 export default function Admin() {
   const [blogPosted, setBlogPosted] = useState(false);
-  const [isPosting, setIsPosting] = useState(false); // State to track if posting is in progress
+  const [isPosting, setIsPosting] = useState(false);
 
   const handlePostBlog = () => {
     setBlogPosted(true);
@@ -26,7 +28,13 @@ export default function Admin() {
             onClick={handlePostBlog}
             disabled={isPosting}
           >
-            {isPosting ? "Posting..." : "Post blog"}
+            {isPosting ? (
+              <div className="spinner">
+                <span class="loader"></span> Posting...
+              </div>
+            ) : (
+              "Post blog"
+            )}
           </button>
         </div>
       </div>

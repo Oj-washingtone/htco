@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect, useRef } from "react";
 import "./editor.css";
 
@@ -9,6 +11,7 @@ import Delimiter from "@editorjs/delimiter";
 import Embed from "@editorjs/embed";
 import Image from "@editorjs/image";
 import Quote from "@editorjs/quote";
+import ImageTool from "@editorjs/image";
 
 export default function BlogEditor({ blogPosted }) {
   const [isEditorLoading, setIsEditorLoading] = useState(true);
@@ -43,8 +46,12 @@ export default function BlogEditor({ blogPosted }) {
         inlineToolbar: true,
       },
       image: {
-        class: Image,
+        class: ImageTool,
         inlineToolbar: true,
+        endpoints: {
+          byFile: "/api/uploads",
+          byUrl: "/api/uploads",
+        },
       },
       quote: {
         class: Quote,
