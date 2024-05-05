@@ -16,12 +16,13 @@ export async function POST(req, res) {
     await blog.save();
   } catch (err) {
     console.log(err);
-    return NextResponse.json({ message: "Failed to save to database" });
+    return NextResponse.json({ message: "failed" });
   }
 
-  return NextResponse.json({ message: "Blog saved successfully" });
+  return NextResponse.json({ message: "success" });
 }
 
 export async function GET() {
-  return NextResponse.json({ message: "Hello World" });
+  // get all blog posts from db order by latest on top
+  
 }

@@ -2,7 +2,12 @@
 
 import React, { useState } from "react";
 import "./admin.css";
-import BlogEditor from "@/components/BlogEditor/BlogEditor";
+// import BlogEditor from "@/components/BlogEditor/BlogEditor";
+import dynamic from "next/dynamic";
+
+const BlogEditor = dynamic(() => import("@/components/BlogEditor/BlogEditor"), {
+  ssr: false,
+});
 
 export default function Admin() {
   const [blogPosted, setBlogPosted] = useState(false);
@@ -10,12 +15,12 @@ export default function Admin() {
 
   const handlePostBlog = () => {
     setBlogPosted(true);
-    setIsPosting(true); // Start posting, set isPosting to true
+    setIsPosting(true);
   };
 
   // Function to handle post success
   const handlePostSuccess = () => {
-    setIsPosting(false); // Posting completed, set isPosting to false
+    setIsPosting(false);
   };
 
   return (

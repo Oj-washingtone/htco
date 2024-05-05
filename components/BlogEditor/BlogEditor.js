@@ -13,12 +13,13 @@ import Image from "@editorjs/image";
 import Quote from "@editorjs/quote";
 import ImageTool from "@editorjs/image";
 
-export default function BlogEditor({ blogPosted }) {
+export default function BlogEditor({ blogPosted, onPostSuccess }) {
   const [isEditorLoading, setIsEditorLoading] = useState(true);
   const isReady = useRef(false);
   const editorInstance = useRef(null);
 
   const [isPosting, setIsPosting] = useState(false);
+  const [notification, setNotification] = useState(null);
 
   const configs = {
     holder: "editorjs",
@@ -48,9 +49,11 @@ export default function BlogEditor({ blogPosted }) {
       image: {
         class: ImageTool,
         inlineToolbar: true,
-        endpoints: {
-          byFile: "/api/uploads",
-          byUrl: "/api/uploads",
+        config: {
+          endpoints: {
+            byFile: "/api/uploads",
+            byUrl: "/api/uploads",
+          },
         },
       },
       quote: {
@@ -97,9 +100,24 @@ export default function BlogEditor({ blogPosted }) {
 
       const result = await response.json();
 
-      alert(result.message);
+      if (result.message === "success") {
+        setNotification("Blog posted successfully");
+
+        // Notify the parent component here
+
+        onPostSuccess();
+
+        setTimeout(() => {
+          setNotification(null);
+        }, 3000);
+      } else {
+        setNotification("Failed to post blog");
+      }
+
+      // clear the editor after posting
+      editorInstance.current.clear();
     } catch (err) {
-      console.log(err);
+      console.err(err);
       alert("Failed to post blog");
     } finally {
       setIsPosting(false);
@@ -108,6 +126,12 @@ export default function BlogEditor({ blogPosted }) {
 
   return (
     <div className="container">
+      {notification && (
+        <div className="alert alert-success" role="alert">
+          {notification}
+        </div>
+      )}
+
       <div className="row">
         <div id="editorjs" className="col-sm-8 blog-page"></div>
       </div>
