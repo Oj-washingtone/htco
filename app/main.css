@@ -43,6 +43,10 @@
   margin: 0 10px;
 }
 
+.learn-more-btn {
+  color: var(--primary-color);
+}
+
 .custom-btn-outline {
   background: transparent;
   border: 1px solid var(--primary-color);

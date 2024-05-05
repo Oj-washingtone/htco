@@ -1,88 +1,208 @@
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 0 !important;
-    z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 0 !important;
+  z-index: 99;
+  border-bottom: 1px solid #f2f3f5;
+}
+
+.contact-stripe {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: #dafefc !important;
+  display: flex;
+  flex-direction: row;
+}
+
+.stripe-contact-item {
+  margin-right: 20px;
+  font-family: var(--font-family-sans-serif);
+}
+
+.menu-large {
+  width: 100%;
+  padding: 10px;
+}
+
+.menu-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #76c21b; */
+  z-index: inherit;
+  margin-left: 10px;
+}
+
+.org-name {
+  font-size: 15px;
+  margin: 0 !important;
+}
+
+.tagline {
+  font-size: 10px;
+  margin: 0 !important;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+li {
+  margin: 0 20px;
+}
+
+.custom-btn {
+  background: linear-gradient(to bottom right, #76c21b, #b5f36a);
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.custom-btn:not([disabled]):focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem #47ef71f3,
+    0.125rem 0.125rem 1rem #ff9a5a80;
+}
+
+.custom-btn:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem #00000080, -0.125rem -0.125rem 1rem #47ef71f3,
+    0.125rem 0.125rem 1rem #d9ff5aec;
+}
+
+.toggle-menu {
+  display: none;
+}
+
+.toggle-menu-btn {
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-small {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  background-color: #fff;
+  border-left: 1px solid #f2f3f5;
+  padding: 20px;
+}
+
+.menu-small.slide-in {
+  animation: slide-in 0.5s ease forwards;
+}
+
+.menu-small.slide-out {
+  animation: slide-out 0.5s ease forwards;
+}
+
+.menu-small ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
+}
+
+.menu-small li {
+  margin: 10px 0;
+}
+
+.close-menu-wrapper {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.close-menu-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
   }
-  
-  .contact-stripe {
-    width: 100%;
-    height: 40px;
-    padding: 10px;
-    background-color: #dafefc !important;
-    display: flex;
-    flex-direction: row;
+
+  100% {
+    transform: translateX(0%);
   }
-  
-  .stripe-contact-item {
-    margin-right: 20px;
-    font-family: var(--font-family-sans-serif);
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
   }
-  
-  .menu-large {
-    width: 100%;
-    padding: 10px;
+  100% {
+    transform: translateX(100%);
   }
-  
-  .menu-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+}
+
+.contact-us-btn {
+  color: #fff;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    display: none;
   }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: 600;
+
+  .toggle-menu {
+    display: block;
   }
-  
-  ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  li {
-    margin: 0 20px;
-  }
-  
-  .custom-btn {
-    background: linear-gradient(to bottom right, #76c21b, #b5f36a);
-    border: 0;
-    border-radius: 12px;
-    color: #ffffff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
-      sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 2.5;
-    outline: transparent;
-    padding: 0 1rem;
-    text-align: center;
-    text-decoration: none;
-    transition: box-shadow 0.2s ease-in-out;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-  }
-  
-  .custom-btn:not([disabled]):focus {
-    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
-      -0.125rem -0.125rem 1rem #47ef71f3,
-      0.125rem 0.125rem 1rem #ff9a5a80;
-  }
-  
-  .custom-btn:not([disabled]):hover {
-    box-shadow: 0 0 0.25rem #00000080,
-      -0.125rem -0.125rem 1rem #47ef71f3,
-      0.125rem 0.125rem 1rem #d9ff5aec;
-  }
-  
+}
