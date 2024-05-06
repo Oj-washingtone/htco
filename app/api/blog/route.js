@@ -24,5 +24,10 @@ export async function POST(req, res) {
 
 export async function GET() {
   // get all blog posts from db order by latest on top
-  
+  const posts = await BlogPost.find().sort({ createdAt: -1 });
+  return NextResponse.json(posts);
 }
+
+
+// ednpoint to get latest 2 blogs
+

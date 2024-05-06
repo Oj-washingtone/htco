@@ -1,8 +1,22 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import "./blogsection.css";
 import Image from "next/image";
 
 export default function BlogSection() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/blog/latest")
+      .then((res) => res.json())
+      .then((data) => {
+        setPosts(data);
+      });
+  }, []);
+
+  console.log(posts);
+
   return (
     <div className="row features-section">
       <div className="section-header">
@@ -15,7 +29,7 @@ export default function BlogSection() {
           <div className="col-sm-6">
             <div className="blog-item">
               <div className="blog-img">
-              <Image
+                <Image
                   src="/img/gallery/1.JPG"
                   alt="Picture of the author"
                   width={400}
@@ -58,7 +72,7 @@ export default function BlogSection() {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <a href="#" className="read-more">
-                  Read More 
+                  Read More
                 </a>
               </div>
             </div>

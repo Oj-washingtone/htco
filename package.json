@@ -25,6 +25,8 @@
     "bootstrap-icons": "^1.11.3",
     "boxicons": "^2.1.4",
     "connect-mongo": "^5.1.0",
+    "editorjs-html": "^3.4.3",
+    "editorjs-react-renderer": "^3.5.1",
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.3",
     "multer": "^1.4.5-lts.1",
