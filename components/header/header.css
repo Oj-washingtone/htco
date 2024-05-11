@@ -70,6 +70,7 @@ header {
 .tagline {
   font-size: 10px;
   margin: 0 !important;
+  color: #434343;
 }
 
 ul {
@@ -195,7 +196,6 @@ li {
 .contact-us-btn {
   color: #fff;
 }
-
 
 @media only screen and (max-width: 600px) {
   .menu {

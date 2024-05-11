@@ -66,20 +66,24 @@ export default function Header() {
         </div>
       </div>
       <div className=" menu-wrapper">
-        <div className="logo">
-          <div className="logo-image">
-            <Image
-              src="/img/logo/logo.png"
-              width={100}
-              height={100}
-              alt="HTCO Logo"
-            />
+        <Link href="/">
+          <div className="logo">
+            <div className="logo-image">
+              <Image
+                src="/img/logo/logo.png"
+                width={100}
+                height={100}
+                alt="HTCO Logo"
+              />
+            </div>
+            <div className="logo-text">
+              <h2 className="poppins-extrabold org-name">
+                Humanity Touch Org.
+              </h2>
+              <p className="tagline">We build dreams.</p>
+            </div>
           </div>
-          <div className="logo-text">
-            <h2 className="poppins-extrabold org-name">Humanity Touch Org.</h2>
-            <p className="tagline">We build dreams.</p>
-          </div>
-        </div>
+        </Link>
         <div className="menu">
           <ul>
             <li>
