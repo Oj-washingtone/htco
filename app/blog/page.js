@@ -70,6 +70,7 @@ export default function page() {
         <div class="container">
           <div class="row">
             <div class="col-lg-12 my-posts">
+              <h3 className="poppins-extrabold blog-intro">Blog Posts</h3>
               {posts.map((post, index) => {
                 if (index === 0) {
                   return (

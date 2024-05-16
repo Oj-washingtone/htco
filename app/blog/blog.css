@@ -59,7 +59,16 @@
   padding: 20px;
 }
 
+.blog-intro {
+  text-align: center !important;
+  margin-bottom: 60px;
+}
+
 @media (max-width: 768px) {
+  .main {
+    margin-top: 40px !important;
+  }
+
   .latest-blog-wrapper {
     padding: 10px;
   }
