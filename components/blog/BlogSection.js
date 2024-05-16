@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import "./blogsection.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BlogSection() {
   const [posts, setPosts] = useState([]);
@@ -11,76 +12,87 @@ export default function BlogSection() {
     fetch("/api/blog/latest")
       .then((res) => res.json())
       .then((data) => {
-        setPosts(data);
+        const postSummaries = [];
+
+        data.forEach((post) => {
+          const postSurmmary = {
+            id: post._id,
+            title: "",
+            description: "",
+            image: "",
+            createdAt: post.createdAt,
+          };
+
+          const postContent = post.post;
+
+          postContent.blocks.forEach((block) => {
+            switch (block.type) {
+              case "header":
+                if (!postSurmmary.title) {
+                  postSurmmary.title = block.data.text;
+                }
+                break;
+              case "paragraph":
+                if (!postSurmmary.description) {
+                  postSurmmary.description = block.data.text;
+                }
+                break;
+              case "image":
+                if (!postSurmmary.image) {
+                  postSurmmary.image = block.data.file.url;
+                }
+                break;
+              default:
+                break;
+            }
+          });
+
+          postSummaries.push(postSurmmary);
+        });
+        setPosts(postSummaries);
       });
   }, []);
 
-  console.log(posts);
-
   return (
-    <div className="row features-section">
-      <div className="section-header">
-        <h4 className="poppins-extrabold section-title">News</h4>
-        <h3 className="poppins-extrabold about-intro">Latest from Blog</h3>
-      </div>
+    posts.length > 0 && (
+      <div className="row features-section">
+        <div className="section-header">
+          <h4 className="poppins-extrabold section-title">News</h4>
+          <h3 className="poppins-extrabold about-intro">Latest from Blog</h3>
+        </div>
 
-      <div className="col-12">
-        <div className="row blog-section">
-          <div className="col-sm-6">
-            <div className="blog-item">
-              <div className="blog-img">
-                <Image
-                  src="/img/gallery/1.JPG"
-                  alt="Picture of the author"
-                  width={400}
-                  height={400}
-                />
-              </div>
-              <div className="blog-content">
-                <h5 className="poppins-extrabold blog-title">
-                  <a href="#">The future of the digital world</a>
-                </h5>
-                <p className="blog-date">May 12, 2021</p>
-                <p className="blog-desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <a href="#" className="read-more">
-                  Read More
-                </a>
-              </div>
-            </div>
+        <div className="col-12">
+          <div className="row blog-section">
+            {posts.map((post, index) => {
+              return (
+                <div key={index} className="col-sm-6 my_post_section">
+                  <div className="blog-item  row">
+                    <div className="blog-img col-5">
+                      <img src={post.image} alt="posy image" />
+                    </div>
+                    <div className="blog-content col-7">
+                      <h5 className="poppins-extrabold blog-title">
+                        <Link href={`/blog/${post.id}`}>{post.title}</Link>
+                      </h5>
+                      <p className="blog-date">
+                        {new Date(post.createdAt).toDateString()}
+                      </p>
+                      <p className="blog-desc">{post.description}</p>
+                      <Link href={`/blog/${post.id}`} className="read-more">
+                        Read More
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+
+            <Link href="/blog">
+              <button className="my-btn custom-btn-fill">View All</button>
+            </Link>
           </div>
-
-          <div className="col-sm-6">
-            <div className="blog-item">
-              <div className="blog-img">
-                <Image
-                  src="/img/gallery/5.JPG"
-                  alt="Picture of the author"
-                  width={400}
-                  height={400}
-                />
-              </div>
-              <div className="blog-content">
-                <h5 className="poppins-extrabold blog-title">
-                  <a href="#">The future of the digital world</a>
-                </h5>
-                <p className="blog-date">May 12, 2021</p>
-                <p className="blog-desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <a href="#" className="read-more">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <button className="my-btn custom-btn-fill">View All</button>
         </div>
       </div>
-    </div>
+    )
   );
 }

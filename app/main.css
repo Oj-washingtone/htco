@@ -1,5 +1,5 @@
-.main {
-  margin-top: 100px;
+.home-main {
+  margin-top: 170px !important;
 }
 
 .intro-section {
@@ -132,7 +132,7 @@
   cursor: pointer;
 }
 
-.feature-wrapper:hover{
+.feature-wrapper:hover {
   border: none;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -235,12 +235,12 @@ h6 {
   color: #fff;
 }
 
-.reach-out-details{
+.reach-out-details {
   display: flex;
   flex-direction: roq;
   width: 100%;
   padding: 20px;
 }
- .form-wrapper {
+.form-wrapper {
   margin: 0 auto;
- }
+}
