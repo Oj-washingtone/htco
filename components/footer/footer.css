@@ -99,9 +99,12 @@
 .logo-footer {
     margin-bottom: 30px;
 }
-
+.f_tagline {
+  color: #fff;
+  font-size: 11px;
+}
 @media only screen and (max-width: 600px) {
-  .links-section {
+  .footer-section {
     width: 100%;
     align-items: flex-start;
   }

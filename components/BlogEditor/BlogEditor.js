@@ -52,7 +52,7 @@ export default function BlogEditor({ blogPosted, onPostSuccess }) {
         config: {
           endpoints: {
             byFile: "/api/uploads",
-            byUrl: "/api/uploads",
+            byUrl: "/api/image-link",
           },
         },
       },

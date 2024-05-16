@@ -10,22 +10,24 @@ export default function Footer() {
         <div className="container footer-sections">
           <div className="row">
             <div className="col-sm-3">
-              <div className="logo logo-footer">
-                <div className="logo-image">
-                  <Image
-                    src="/img/logo/f_logo.png"
-                    width={100}
-                    height={100}
-                    alt="HTCO Logo"
-                  />
+              <Link href="/">
+                <div className="logo logo-footer">
+                  <div className="logo-image">
+                    <Image
+                      src="/img/logo/f_logo.png"
+                      width={100}
+                      height={100}
+                      alt="HTCO Logo"
+                    />
+                  </div>
+                  <div className="logo-text">
+                    <h2 className="poppins-extrabold f-org-name">
+                      Humanity Touch Org
+                    </h2>
+                    <p className="f_tagline">We build dreams.</p>
+                  </div>
                 </div>
-                <div className="logo-text">
-                  <h2 className="poppins-extrabold f-org-name">
-                    Humanity Touch Org
-                  </h2>
-                  <p className="tagline">We build dreams.</p>
-                </div>
-              </div>
+              </Link>
               <p>
                 We empower local communities through social and economic
                 services. As a non-profit, we rely on sponsorships, donations,

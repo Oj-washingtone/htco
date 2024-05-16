@@ -1,3 +1,50 @@
+.main {
+  margin-top: 100px !important;
+}
+
 .my-posts {
-    margin: 0 auto !important;
+  margin: 0 auto !important;
+}
+
+.post-discription {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.snap-header {
+  margin-top: 20px !important;
+}
+
+/* .image-thumb-wrapper {
+  height: 200px;
+} */
+
+.image-thumb-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.single__post {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+.post_snap {
+  margin-left: 20px !important;
+}
+
+.image-thumb-wrapper {
+  border-radius: 10px;
+}
+
+.image-thumb-wrapper image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: inherit !important;
 }
