@@ -73,8 +73,8 @@ export default function page() {
               {posts.map((post, index) => {
                 if (index === 0) {
                   return (
-                    <div key={index} className="bsingle__post mb-50">
-                      <div className="bsingle__post-thumb">
+                    <div key={index} className="latest-blog-wrapper">
+                      <div className="latest-post-image-wrapper">
                         <img src={post.image} alt="" />
                       </div>
                       <div className="bsingle__content">
@@ -94,17 +94,21 @@ export default function page() {
                       </div>
                     </div>
                   );
-                } else {
-                  return (
-                    <div className="row">
+                }
+              })}
+
+              <div className="row">
+                {posts.map((post, index) => {
+                  if (index !== 0) {
+                    return (
                       <div key={index} className="col-sm-6">
                         <Link href={`/blog/${post.id}`}>
                           <div className="single__post row">
-                            <div className="col-sm-5">
+                            <div className="col-sm-5 post-image">
                               <img src={post.image} alt="" />
                             </div>
 
-                            <div className="col-sm-6">
+                            <div className="col-sm-6 post-text">
                               <h5 className="snap-header">{post.title}</h5>
 
                               <p className="post-discription">
@@ -114,10 +118,10 @@ export default function page() {
                           </div>
                         </Link>
                       </div>
-                    </div>
-                  );
-                }
-              })}
+                    );
+                  }
+                })}
+              </div>
             </div>
           </div>
         </div>
