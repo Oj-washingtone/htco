@@ -24,6 +24,72 @@ export default function page() {
       });
   }, [id]);
 
+  const config = {
+    header: {
+      disableDefaultStyle: true,
+    },
+    image: {
+      disableDefaultStyle: true,
+    },
+    video: {
+      disableDefaultStyle: true,
+    },
+  };
+
+  const style = {
+    header: {
+      textAlign: "left",
+    },
+    image: {
+      img: {
+        width: "100%",
+      },
+      figure: {
+        backgroundColor: "white",
+        border: "1px solid #eee",
+      },
+      figcaption: {
+        borderRadius: "5px",
+      },
+    },
+
+    embed: {
+      video: {
+        maxHeight: "400px",
+      },
+      figure: {
+        justifyContent: "center",
+      },
+      figcaption: {
+        borderRadius: "5px",
+      },
+    },
+    paragraph: {
+      textAlign: "left",
+      cursor: "default",
+    },
+    list: {
+      textAlign: "left",
+    },
+    checklist: {
+      container: {},
+      item: {},
+      checkbox: {},
+      label: {},
+    },
+
+    quote: {
+      container: {},
+      content: {},
+      author: {
+        fontWeight: "bold",
+      },
+      message: {
+        textAlign: "left",
+      },
+    },
+  };
+
   return (
     <div className="main-post-area">
       <Header />
@@ -35,7 +101,7 @@ export default function page() {
                 <i class="fal fa-calendar-alt"></i>{" "}
                 {new Date(postData.createdAt).toDateString()}
               </p>
-              <Output data={postData.post} />
+              <Output data={postData.post} config={config} />
 
               <div class="meta-info">
                 <ul></ul>
