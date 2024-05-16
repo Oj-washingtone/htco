@@ -4,8 +4,10 @@ import React, { useState, useEffect } from "react";
 import "./header.css";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -15,6 +17,8 @@ export default function Header() {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+  const isActive = (pathname) => router.pathname === pathname;
 
   return (
     <header className="header">
@@ -87,9 +91,11 @@ export default function Header() {
         <div className="menu">
           <ul>
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/">
+                <div className={isActive("/") ? "active-route" : ""}>Home</div>
+              </Link>
             </li>
-            <li>
+            <li className={isActive("/#about") ? "active-route" : ""}>
               <Link href="#about">About</Link>
             </li>
             <li>
