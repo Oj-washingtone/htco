@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <Header />
 
-      <main className="main">
+      <main className="home-main">
         <div className="container">
           {/* <!-- Intro Section --> */}
           <div className="row">
@@ -358,7 +358,7 @@ export default function Home() {
                       <div className="member-info">
                         <h5 className="poppins-bold">Hillary Ochieng</h5>
                         <h6 className="poppins-regular role">
-                          Operations Director
+                          Communication Director
                         </h6>
                       </div>
                     </div>
@@ -432,7 +432,7 @@ export default function Home() {
                       <div className="member-info">
                         <h5 className="poppins-bold">Williams Sinino</h5>
                         <h6 className="poppins-regular role">
-                          Administrative assistant
+                          Operation Director
                         </h6>
                       </div>
                     </div>
