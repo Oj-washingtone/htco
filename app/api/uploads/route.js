@@ -31,7 +31,7 @@ export async function POST(req, res) {
     return NextResponse.json({
       success: 1,
       file: {
-        url: `http://localhost:3000/img/blog/${imageName}`,
+        url: `https://humanitytouch.org/img/blog/${imageName}`,
       },
     });
   } catch (err) {

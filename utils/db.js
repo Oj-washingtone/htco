@@ -1,8 +1,10 @@
 import mongoose from "mongoose";
 import { MongoClient, ServerApiVersion } from "mongodb";
 
+const password = encodeURIComponent("Fu6#ttf6k593D9.");
+
 const uri =
-  "mongodb+srv://jalangowashingtone:J51EqSbqBrrlK7LN@cluster0.hq67cut.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp";
+  `mongodb+srv://wiseman:${password}@cluster0.eqwsuju.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
 mongoose.connect(uri);
 
