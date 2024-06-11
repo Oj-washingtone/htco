@@ -19,7 +19,7 @@ import "@/res/css/responsive.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "HTCO",
+  title: "Humanity Touch Charity Organisation",
   description:
     "We provide social and economic empowerment services to people at the local community. We are a non-profit organization whose activities are based primarily on sponsorship, donor funding and volunteer efforts. Ours is to build dreams and create possibility in every impossibility.",
 };
