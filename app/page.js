@@ -83,6 +83,42 @@ export default function Home() {
 
           <div className="row features-section" id="activities">
             <div className="section-header">
+              {/* <h4 className="poppins-extrabold section-title">Activities</h4> */}
+              <h3 className="poppins-extrabold about-intro">What guides us.</h3>
+            </div>
+            <div className="col-sm-11 mission">
+              <div className="row">
+                <div className="col-sm-4 col-md-4 col-lg-4 mission-section">
+                  <h4 className="poppins-bold">Our Mission</h4>
+                  <p className="poppins">
+                    Empower and strengthen communities by addressing their
+                    unique needs and challenges through collaborative efforts
+                    and sustainable solutions.
+                  </p>
+                </div>
+                <div className="col-sm-4 col-md-4 col-lg-4 mission-section vision">
+                  <h4 className="poppins-bold">Our Vision</h4>
+                  <p className="poppins">
+                    Build a community where no one is left behind, where
+                    individuals and families receive the support they need to
+                    overcome adversity, actualize their dreams and thrive.
+                  </p>
+                </div>
+                <div className="col-sm-4 col-md-4 col-lg-4 mission-section">
+                  <h4 className="poppins-bold">Core Values</h4>
+                  <ul>
+                    <li>Inclusivity</li>
+                    <li>Accountability</li>
+                    <li>Compassion</li>
+                    <li>Respect and Dignity</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row features-section" id="activities">
+            <div className="section-header">
               <h4 className="poppins-extrabold section-title">Activities</h4>
               <h3 className="poppins-extrabold about-intro">What we do</h3>
             </div>

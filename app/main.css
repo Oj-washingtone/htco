@@ -37,6 +37,34 @@
   flex-direction: row;
 }
 
+.mission {
+  margin: 20px auto;
+  /* background-color: #b5f36a; */
+}
+
+.mission-section {
+  padding: 20px 30px;
+  border-radius: 5px;
+}
+
+.vision {
+  background-color: #b5f36a;
+}
+
+.mission-section ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start !important;
+  list-style-type: disc !important;
+}
+
+.mission-section ul li {
+  text-align: left !important;
+  list-style-type: disc !important;
+  margin: 5px 20px;
+}
+
 .my-btn {
   padding: 10px 20px;
   border-radius: 30px;

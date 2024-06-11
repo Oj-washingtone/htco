@@ -6,6 +6,7 @@ import Footer from "@/components/footer/footer";
 import Output from "editorjs-react-renderer";
 import { useRouter } from "next/router";
 import { useParams } from "next/navigation";
+import BlogSkeleton from "@/components/blog-skeleton/BlogSkeleton";
 
 import "./blog-single.css";
 
@@ -95,20 +96,28 @@ export default function page() {
       <Header />
       <div class="container">
         <div class="row">
-          <div class="col-lg-10 my-posts">
-            <div className="">
-              <p>
-                <i class="fal fa-calendar-alt"></i>{" "}
-                {new Date(postData.createdAt).toDateString()}
-              </p>
-              <Output data={postData.post} config={config} />
+          {postData.length === 0 ? (
+            <BlogSkeleton />
+          ) : (
+            <div class="col-lg-10 my-posts">
+              <div className="">
+                {postData?.createdAt && (
+                  <p>
+                    <i class="fal fa-calendar-alt"></i>{" "}
+                    {new Date(postData?.createdAt).toDateString()}
+                  </p>
+                )}
+                <Output data={postData.post} config={config} />
 
-              <div class="meta-info">
-                <ul></ul>
+                <div class="meta-info">
+                  <ul></ul>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
+
+        <div class="row comment-section"></div>
       </div>
       <Footer />
     </div>
